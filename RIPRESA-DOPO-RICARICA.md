@@ -50,3 +50,12 @@ Le note precedenti descrivono il punto di arresto, ora superato.
 - Risultati e screenshot locali in `qa-results.json` e `qa-artifacts/`, ignorati da Git.
 - Accesso Site riconfermato: custom, solo proprietario, nessun visitatore esterno.
 - Credenziali temporanee soltanto nella memoria della sessione; dopo un riavvio richiederne di nuove.
+
+### Pubblicazione completata
+
+- URL indice: https://gambardella-demo-fv.breezykoala2.chatgpt.site/proposte.html
+- Commit salvato e pubblicato: `302303af90d1028cfcc57cb489accdac47eced79`.
+- Deployment: `appgdep_6ace42d1b5348191a82a4ca09b161c1a`, stato `succeeded`.
+- Versione: `appgprj_6ace2ad392d08191b970376b27e9910b~appgver_243a66d8f4d881919add1736c8e0795e`.
+- Pubblicato tramite operazione owner-private; accesso del solo proprietario mantenuto.
+- Il server locale della verifica è stato fermato. Per riprendere, partire dalla nuova raccolta; nessun asset mancante. La prossima fase è la revisione dell’utente e l’affinamento delle identità selezionate.
