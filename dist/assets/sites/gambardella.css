@@ -74,3 +74,4 @@
 
 @media (max-width:1000px){.cover-copy,.cover-art{grid-column:1/-1}.cover-lines{grid-template-columns:1fr 1fr}.cover-lines li:nth-child(3) a{padding-left:0;border-left:0}.cover-lines li:nth-child(n+3){border-top:1px solid}.sommario,.racconto,.letter{grid-template-columns:1fr;gap:32px}.som-head{position:static}.colophon dl{grid-template-columns:1fr 1fr}.timeline{grid-template-columns:1fr}}
 @media (max-width:560px){.cover{padding-top:28px}.toc li{grid-template-columns:48px minmax(0,1fr)}.toc .ask{grid-column:2;justify-self:start}.pg{font-size:2rem}.colophon dl{grid-template-columns:1fr}.letter .brief-sheet{padding:24px 16px 24px 34px;transform:none;box-shadow:6px 6px 0 var(--soft)}.letter .brief-sheet::before{left:20px}.sommario,.racconto,.letter{padding-block:60px}}
+@media (max-width:400px){.mast-name{font-size:clamp(1.9rem,10.5vw,2.6rem)}}

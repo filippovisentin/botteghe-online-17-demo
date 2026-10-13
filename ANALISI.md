@@ -55,6 +55,8 @@ Controlli automatici a 1440, 390 e 320 px su 17 demo, indice, privacy e `index.h
 - il primo Tab raggiunge «Vai al contenuto»; menu apribile, chiudibile con Escape e focus restituito al pulsante; controlli con nome accessibile ed etichette;
 - `prefers-reduced-motion`: nessuna animazione continua (sole, anelli, cartamodello, ago del cruscotto, grissini) e scorrimenti senza effetto morbido;
 - i punti cliccabili sulla scarpa di Il Mio Calzolaio sono duplicati da una lista di pulsanti accessibile da tastiera.
+- a 320 e 390 px il pulsante Menu resta sulla riga del marchio in tutte le demo (il marchio si restringe e va a capo);
+- testi su sfondi sfumati o a motivo (non misurabili automaticamente) controllati uno per uno: corretta l’intestazione di Alby, dove fra 861 e 1040 px i link color crema finivano sulla metà chiara.
 
 ## 6. Correttezza dei contenuti
 

@@ -38,6 +38,9 @@ section[id],[id=main]{scroll-margin-top:16px}
   .navlinks{display:none;flex-basis:100%;flex-direction:column;align-items:stretch;gap:0;border-top:1px solid currentColor}
   .navlinks.open{display:flex}
   .navlinks a{padding:4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 25%,transparent)}
+  /* Brand shrinks and wraps so the Menu button always stays on the same row. */
+  .site-header>.brand{flex:1 1 0;min-width:0}
+  .menu{flex:none;padding:8px 12px}
 }
 
 /* Generic small controls. */
