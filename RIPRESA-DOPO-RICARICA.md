@@ -59,3 +59,10 @@ Le note precedenti descrivono il punto di arresto, ora superato.
 - Versione: `appgprj_6ace2ad392d08191b970376b27e9910b~appgver_243a66d8f4d881919add1736c8e0795e`.
 - Pubblicato tramite operazione owner-private; accesso del solo proprietario mantenuto.
 - Il server locale della verifica è stato fermato. Per riprendere, partire dalla nuova raccolta; nessun asset mancante. La prossima fase è la revisione dell’utente e l’affinamento delle identità selezionate.
+
+## Aggiornamento del 13 ottobre 2026 — Claude Code: analisi, correzioni e ridisegno
+
+- Svolto `CLAUDE-CODE-INCARICO.md`: analisi in `ANALISI.md`, correzioni nel generatore, 17 identità ridisegnate (vedi `DIREZIONI.md`).
+- Nuova struttura: `build.mjs` (dati), `src/` (componenti, pagine, indice, privacy, font), `assets/` (CSS per sito, script, font locali). `node build.mjs` ricrea `dist/` da zero; non modificare `dist/` a mano.
+- Verifica automatica Playwright/Chrome su 17 demo + indice + privacy a 1440/390/320 px: nessun overflow, nessun errore in console, nessuna richiesta esterna, bozze, filtri, menu/Escape, conferma 18+ nei bar, motion ridotta, titoli e contrasto AA.
+- **Non** pubblicato sul Site ChatGPT: `.openai/hosting.json` è invariato e la pubblicazione resta all’utente.
