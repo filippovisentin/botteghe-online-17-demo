@@ -15,7 +15,7 @@ document.querySelector('#request-form')?.addEventListener('submit', e => {
  document.querySelector('#draft-text').textContent = currentDraft; document.querySelector('#draft').hidden = false;
  const email = document.body.dataset.email; const mail = document.querySelector('#email-draft');
  if (mail && email) mail.href = `mailto:${email}?subject=${encodeURIComponent('Richiesta informazioni — ' + data.get('service'))}&body=${encodeURIComponent(currentDraft)}`;
- document.querySelector('#draft').scrollIntoView({behavior:'smooth',block:'nearest'}); document.querySelector('#draft-title').focus({preventScroll:true});
+ document.querySelector('#draft').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',block:'nearest'}); document.querySelector('#draft-title').focus({preventScroll:true});
 });
 document.querySelector('#copy-draft')?.addEventListener('click', async () => { const status = document.querySelector('#draft-status'); try { await navigator.clipboard.writeText(currentDraft); status.textContent = 'Testo copiato. Puoi incollarlo nel tuo messaggio.'; } catch { status.textContent = 'La copia automatica non è disponibile: seleziona il testo della bozza per copiarlo.'; } });
 document.querySelector('#download-draft')?.addEventListener('click', () => { const url = URL.createObjectURL(new Blob([currentDraft],{type:'text/plain;charset=utf-8'})); const a = document.createElement('a'); a.href=url; a.download='richiesta-informazioni.txt'; a.click(); setTimeout(()=>URL.revokeObjectURL(url),1000); document.querySelector('#draft-status').textContent='Bozza scaricata. Nessun messaggio è stato inviato.'; });
