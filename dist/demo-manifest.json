@@ -1,0 +1,104 @@
+[
+  {
+    "slug": "gambardella",
+    "name": "Cartoleria Gambardella",
+    "category": "Cartoleria",
+    "priority": "Prima proposta"
+  },
+  {
+    "slug": "mango-esotico",
+    "name": "Mango Esotico",
+    "category": "Gelateria",
+    "priority": "Alta priorità"
+  },
+  {
+    "slug": "autofficina-giacosa",
+    "name": "Autofficina Giacosa",
+    "category": "Autofficina",
+    "priority": "Alta priorità"
+  },
+  {
+    "slug": "il-mio-calzolaio",
+    "name": "Il Mio Calzolaio",
+    "category": "Calzolaio",
+    "priority": "Alta priorità"
+  },
+  {
+    "slug": "sergio-stagnoli",
+    "name": "Sergio Stagnoli",
+    "category": "Tappezzeria",
+    "priority": "Apertura da verificare"
+  },
+  {
+    "slug": "alby",
+    "name": "Alby Panificio & Pasticceria",
+    "category": "Panificio e pasticceria",
+    "priority": "Recapito da verificare"
+  },
+  {
+    "slug": "grissinificio-ambrosiano",
+    "name": "Grissinificio Ambrosiano",
+    "category": "Grissinificio",
+    "priority": "Media priorità"
+  },
+  {
+    "slug": "bar-rondo",
+    "name": "Bar Rondò",
+    "category": "Bar",
+    "priority": "Media priorità"
+  },
+  {
+    "slug": "varisco",
+    "name": "Bar Tabacchi Varisco",
+    "category": "Bar tabacchi",
+    "priority": "Media priorità"
+  },
+  {
+    "slug": "bottega-delle-carni",
+    "name": "La Bottega delle Carni",
+    "category": "Macelleria",
+    "priority": "Telefono da chiarire"
+  },
+  {
+    "slug": "salumeria-da-leo",
+    "name": "Salumeria da Leo",
+    "category": "Salumeria",
+    "priority": "Operatività da verificare"
+  },
+  {
+    "slug": "bar-bijoux",
+    "name": "Bar Bijoux",
+    "category": "Bar",
+    "priority": "Media priorità"
+  },
+  {
+    "slug": "bar-verdi",
+    "name": "Bar Verdi",
+    "category": "Bar",
+    "priority": "Media priorità"
+  },
+  {
+    "slug": "sartoria-il-dragone",
+    "name": "Sartoria Il Dragone",
+    "category": "Sartoria",
+    "priority": "Visita esplorativa"
+  },
+  {
+    "slug": "sartoria-marsilii",
+    "name": "Sartoria Arnaldo Marsilii",
+    "category": "Sartoria",
+    "priority": "Sede da confermare"
+  },
+  {
+    "slug": "calzoleria-taormina",
+    "name": "Calzoleria Taormina",
+    "category": "Calzoleria",
+    "priority": "Proposta condizionata"
+  },
+  {
+    "slug": "angolo-del-panettiere",
+    "name": "L’Angolo del Panettiere",
+    "category": "Panificio",
+    "priority": "Recapito da verificare"
+  }
+]

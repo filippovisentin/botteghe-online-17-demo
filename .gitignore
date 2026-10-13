@@ -1,0 +1,7 @@
+qa.cjs
+qa-results.json
+*-desktop.png
+*-mobile.png
+*.tar.gz
+*.tgz
+node_modules/
