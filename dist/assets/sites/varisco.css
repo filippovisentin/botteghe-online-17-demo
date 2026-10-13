@@ -1,0 +1,62 @@
+@font-face{font-family:"UnifrakturMaguntia";src:url("../fonts/unifrakturmaguntia-latin-400-normal.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Old Standard TT";src:url("../fonts/old-standard-tt-latin-400-normal.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Old Standard TT";src:url("../fonts/old-standard-tt-latin-700-normal.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Old Standard TT";src:url("../fonts/old-standard-tt-latin-400-italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+/* 09 Varisco — a neighbourhood newspaper: newsprint, black ink, blackletter masthead, column rules, one dark red. */
+.s-varisco{--bg:#f4f1ea;--fg:#111;--red:#8b1e1e;--font-d:"Old Standard TT",Georgia,serif;--font-b:"Old Standard TT",Georgia,serif;--demo-bg:#111;--demo-fg:#f4f1ea;--field-bg:#fffdf8;--field-fg:#111;--btn-bg:#111;--btn-fg:#f4f1ea;--chip-on-bg:#111;--chip-on-fg:#f4f1ea;--foot-bg:#111;--foot-fg:#f4f1ea;--focus:#8b1e1e}
+body.s-varisco{font-size:18px}
+.dateline{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 16px;padding:8px var(--gut);font:italic 14px var(--font-b);border-bottom:1px solid}
+.dateline a{min-height:32px;display:inline-flex;align-items:center}
+.masthead{flex-direction:column;padding:12px var(--gut) 0;text-align:center}
+.masthead .brand{flex-direction:column;gap:6px}
+.gothic{font:400 clamp(4rem,14vw,11rem)/.9 "UnifrakturMaguntia",serif;letter-spacing:.01em}
+.motto{font:italic 15px var(--font-b);border-block:3px double;padding:4px 18px}
+.masthead .navlinks{width:100%;justify-content:center;border-block:1px solid;margin-top:12px}
+.masthead .navlinks a{font:700 13px var(--font-b);letter-spacing:.14em;text-transform:uppercase}
+@media (min-width:761px){.masthead .menu{display:none}}
+@media (max-width:760px){.masthead{flex-direction:row;align-items:center;text-align:left;padding-bottom:10px;border-bottom:3px double}.masthead .brand{align-items:flex-start}.gothic{font-size:3.4rem}.motto{font-size:12px;padding:2px 0;border:0}}
+
+.section-label{font:700 13px var(--font-b);letter-spacing:.18em;text-transform:uppercase;border-bottom:1px solid;padding-bottom:6px;margin-bottom:14px}
+.front{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr) minmax(0,.8fr);gap:0;padding:28px var(--gut) 48px}
+.front>*{padding:0 22px}
+.front>*:first-child{padding-left:0}
+.front>*:last-child{padding-right:0}
+.front>*+*{border-left:1px solid}
+.lead-article h1{font-weight:700;font-size:clamp(2.6rem,5vw,4.6rem);line-height:.98;margin-bottom:16px}
+.standfirst{font:italic 1.2rem/1.45 var(--font-b)}
+.cols{columns:2 220px;column-gap:24px;column-rule:1px solid;text-align:justify;hyphens:auto}
+.dropcap::first-letter{float:left;font:400 4.6rem/.75 "UnifrakturMaguntia",serif;padding:6px 8px 0 0;color:var(--red)}
+.engraving{margin:0}
+.engraving figcaption{font:italic 14px var(--font-b);margin-top:8px;border-top:1px solid;padding-top:6px}
+.info-box{background:var(--fg);color:var(--bg);padding:20px!important;align-self:start;margin-left:22px;border:0!important;--focus:#f4f1ea}
+.info-box h2{font:700 1.3rem var(--font-b);border-bottom:3px double;padding-bottom:8px;margin-bottom:10px}
+.info-box dl{margin:0}
+.info-box dt{font:700 12px var(--font-b);letter-spacing:.14em;text-transform:uppercase;margin-top:10px}
+.info-box dd{margin:0}
+.info-box .phone{font:700 1.5rem var(--font-b)}
+
+.to-write{margin:0 var(--gut);padding:40px 0;border-block:3px double;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:12px 48px}
+.to-write h2{font:400 clamp(2.4rem,5vw,4rem)/1 "UnifrakturMaguntia",serif;color:var(--red)}
+.to-write ol{list-style:none;grid-column:2;display:grid;gap:10px}
+.to-write li{font:italic 1.35rem/1.35 var(--font-b);display:flex;gap:16px;border-bottom:1px dotted;padding-bottom:10px}
+.to-write li span{font-style:normal;font-weight:700;color:var(--red);min-width:2em}
+.to-write .standfirst{grid-row:2}
+
+.rubrics{padding:48px var(--gut)}
+.rubrics>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.rubrics article{padding:0 22px;border-left:1px solid}
+.rubrics article:first-child{padding-left:0;border-left:0}
+.rubrics h3{font-weight:700;font-size:1.5rem;margin-bottom:8px}
+.rubrics .ask{font:italic 700 1rem var(--font-b)}
+
+.notice{margin:0 var(--gut);padding:20px 24px;border:3px solid var(--red);display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center}
+.notice h2{font:700 13px var(--font-b);letter-spacing:.18em;text-transform:uppercase;color:var(--red);writing-mode:horizontal-tb}
+.notice p{margin:0}
+
+.letters{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:48px;padding:64px var(--gut) 80px}
+.letters h2{font-weight:700;font-size:clamp(2.4rem,4.6vw,4rem)}
+.letters .kicker{font-family:var(--font-b);letter-spacing:.18em;border-bottom:1px solid;padding-bottom:6px}
+.letters .brief-sheet{border:1px solid;padding:28px;background:var(--field-bg);box-shadow:4px 4px 0 var(--fg)}
+
+@media (max-width:1000px){.front{grid-template-columns:1fr 1fr}.lead-article{grid-column:1/-1;padding-right:0!important;margin-bottom:24px}.front>.engraving{border-left:0;padding-left:0}.to-write,.letters{grid-template-columns:1fr}.to-write ol,.to-write .standfirst{grid-column:1;grid-row:auto}}
+@media (max-width:640px){.front{grid-template-columns:1fr}.front>*{padding:0!important;border-left:0!important}.info-box{margin:24px 0 0;padding:20px!important}.rubrics>div{grid-template-columns:1fr}.rubrics article{padding:16px 0;border-left:0;border-top:1px solid}.notice{grid-template-columns:1fr;gap:6px}.letters .brief-sheet{padding:20px 14px}.cols{text-align:left}}

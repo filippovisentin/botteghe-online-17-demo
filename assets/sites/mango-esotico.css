@@ -1,0 +1,58 @@
+/* 02 Mango Esotico — tropical poster: saturated orange, sun, pink, leaf green, sticker shapes. */
+.s-mango-esotico{--bg:#fff6e5;--fg:#2b1608;--orange:#ff8a3d;--sun:#ffd23f;--pink:#ff6f91;--leaf:#1d5e3b;--font-d:"Shrikhand",Georgia,serif;--font-b:"Nunito",system-ui,sans-serif;--radius:999px;--demo-bg:#2b1608;--demo-fg:#ffd23f;--field-bg:#fff;--field-fg:#2b1608;--btn-bg:#2b1608;--btn-fg:#ffd23f;--foot-bg:#1d5e3b;--foot-fg:#fff6e5;--chip-on-bg:#2b1608;--chip-on-fg:#ffd23f}
+.s-mango-esotico h1,.s-mango-esotico h2{letter-spacing:-.01em}
+.pills{padding:14px var(--gut);background:var(--orange)}
+.pills .brand{font:400 1.5rem/1 var(--font-d)}
+.logo-dot{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--fg);color:var(--sun);font:400 1.5rem/1 var(--font-d)}
+.pills .navlinks a{padding:0 16px;border-radius:999px;background:var(--bg);font-weight:800;margin:4px 0}
+.pills .navlinks{gap:8px}
+@media (max-width:760px){.pills .navlinks a{margin:4px 0;border-bottom:0}.pills .navlinks{border-top:0;padding-top:8px}}
+
+.poster{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:24px;align-items:center;padding:40px var(--gut) 96px;background:var(--orange);overflow:hidden;isolation:isolate;border-radius:0 0 50% 50%/0 0 80px 80px}
+.sun{position:absolute;z-index:-1;width:min(70vw,760px);aspect-ratio:1;border-radius:50%;right:-8%;top:-12%;background:repeating-conic-gradient(var(--sun) 0 8deg,#ffc22e 8deg 16deg)}
+@media (prefers-reduced-motion:no-preference){.sun{animation:spin 90s linear infinite}.badge{animation:spin 30s linear infinite reverse}}
+@keyframes spin{to{transform:rotate(1turn)}}
+.badge{position:absolute;width:150px;left:44%;top:22px;z-index:2}
+.poster h1{font-size:clamp(4rem,11vw,10rem);line-height:.86;color:var(--fg);text-shadow:6px 6px 0 var(--pink)}
+.slogan{font:800 clamp(1.2rem,2.4vw,1.8rem)/1.2 var(--font-b);margin:24px 0 8px}
+.poster .lead{max-width:42ch;font-size:1.1rem}
+.poster-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:24px}
+.phone-pill{display:inline-flex;align-items:center;min-height:52px;padding:0 22px;border-radius:999px;background:var(--bg);font-weight:800;text-decoration:none;border:2px solid var(--fg)}
+.poster-art{margin:0}
+.poster-art svg{filter:drop-shadow(8px 10px 0 rgba(43,22,8,.18))}
+.poster-art figcaption{font-size:12px;text-align:center;font-weight:800}
+
+.momento{padding:88px var(--gut);text-align:center}
+.momento h2{font-size:clamp(2.4rem,6vw,5rem);color:var(--leaf)}
+.switch{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:28px 0 36px;padding:8px;border-radius:999px;background:var(--fg)}
+.switch [data-choice]{border:0;color:var(--bg);font-weight:800;font-size:1.05rem;padding:12px 24px}
+.switch [aria-pressed=true]{background:var(--sun);color:var(--fg)}
+.mom-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:32px;align-items:center;text-align:left;padding:48px;border-radius:48px 160px 48px 160px;background:var(--sun)}
+.mom-panel[data-panel=festa]{background:var(--pink)}
+.giant{font:400 clamp(4rem,11vw,9rem)/.9 var(--font-d);color:var(--fg);transform:rotate(-8deg);margin:0;text-align:center}
+.mom-panel h3{font:400 clamp(1.6rem,3vw,2.4rem)/1.1 var(--font-d);margin-bottom:14px}
+.scoops{list-style:none;display:flex;gap:16px;margin:8px 0 20px;flex-wrap:wrap}
+.scoops li{display:flex;flex-direction:column;align-items:center;width:110px;text-align:center;font-weight:800;line-height:1.2}
+.scoops svg{width:80px}
+.scoops small{font-weight:400}
+@media (prefers-reduced-motion:no-preference){.scoops li:hover svg{transform:rotate(-8deg) translateY(-4px);transition:transform .2s}}
+
+.ticket{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:48px;padding:88px var(--gut);background:var(--leaf);color:var(--bg);--focus:var(--sun)}
+.ticket h2{font-size:clamp(2.4rem,5vw,4.4rem);color:var(--sun)}
+.ticket .brief-sheet{background:var(--bg);color:var(--fg);padding:40px;border-radius:28px;position:relative;--focus:var(--fg);-webkit-mask:radial-gradient(14px at 0 50%,#0000 98%,#000) 0 0/51% 100% no-repeat,radial-gradient(14px at 100% 50%,#0000 98%,#000) 100% 0/51% 100% no-repeat;mask:radial-gradient(14px at 0 50%,#0000 98%,#000) 0 0/51% 100% no-repeat,radial-gradient(14px at 100% 50%,#0000 98%,#000) 100% 0/51% 100% no-repeat}
+.ticket input:not([type=checkbox]),.ticket select,.ticket textarea{border-radius:18px}
+.ticket .privacy-note{border-color:var(--pink)}
+
+.famiglia{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 48px;padding:88px var(--gut);background:var(--pink)}
+.famiglia h2{font-size:clamp(2.2rem,4.5vw,3.8rem)}
+.famiglia>p{font-size:1.2rem;max-width:44ch}
+.famiglia .small{grid-column:2;font-size:.95rem}
+.visita{display:grid;grid-template-columns:auto minmax(0,1fr);gap:48px;align-items:center;padding:88px var(--gut)}
+.visita .num{font:400 clamp(8rem,22vw,18rem)/.8 var(--font-d);color:var(--orange);text-shadow:8px 8px 0 var(--fg);margin:0}
+.visita h2{font-size:clamp(2.4rem,5vw,4rem);color:var(--leaf);margin-bottom:12px}
+.visita .addr{font-size:1.3rem;font-weight:800;margin:0}
+.visita .phone{font:400 2rem var(--font-d)}
+.small{font-size:.95rem}
+
+@media (max-width:900px){.poster,.ticket,.famiglia,.mom-panel{grid-template-columns:1fr}.famiglia .small{grid-column:1}.badge{left:auto;right:16px;top:auto;bottom:40px;width:110px}.poster{padding-bottom:72px}}
+@media (max-width:560px){.poster h1{font-size:clamp(3.4rem,18vw,5rem)}.mom-panel{padding:28px 20px;border-radius:32px 80px}.visita{grid-template-columns:1fr;gap:12px}.ticket .brief-sheet{padding:28px 22px}.momento,.ticket,.famiglia,.visita{padding-block:60px}.switch{border-radius:28px}.badge{width:92px;bottom:24px}}

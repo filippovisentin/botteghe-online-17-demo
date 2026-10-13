@@ -1,0 +1,71 @@
+/* 01 Gambardella — paper magazine. Blue ink, highlighter yellow, a red margin line. */
+.s-gambardella{--bg:#fbf8f1;--fg:#13324a;--yellow:#f4c430;--red:#ad3421;--soft:#dce7ef;--font-d:"Playfair Display",Georgia,serif;--font-b:"Libre Franklin",system-ui,sans-serif;--demo-bg:#13324a;--demo-fg:#fbf8f1;--field-bg:#fffdf7;--field-fg:#13324a;--foot-bg:#13324a;--foot-fg:#fbf8f1;--focus:#ad3421}
+.s-gambardella h1 em,.s-gambardella h2 em{font-style:italic}
+.mast-top{display:flex;justify-content:space-between;gap:8px 24px;flex-wrap:wrap;padding:10px var(--gut);font-size:12px;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid}
+.mast{flex-direction:column;justify-content:center;padding:22px var(--gut) 0;border-bottom:4px double;text-align:center}
+.mast .brand{flex-direction:column;gap:4px}
+.mast-name{font:italic 700 clamp(3rem,9vw,7.5rem)/.9 var(--font-d);letter-spacing:-.03em}
+.mast-sub{font-size:12px;letter-spacing:.24em;text-transform:uppercase}
+.mast .navlinks{justify-content:center;border-top:1px solid;width:100%;padding:2px 0}
+.mast .navlinks a{font-size:15px;letter-spacing:.04em}
+@media (min-width:761px){.mast .menu{display:none}}
+@media (max-width:760px){.mast{flex-direction:row;justify-content:space-between;text-align:left;padding-bottom:10px}.mast .brand{align-items:flex-start}.mast-name{font-size:2.6rem}.mast-sub{letter-spacing:.12em;font-size:10px}.mast .navlinks{border-top:1px solid}}
+
+.cover{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;padding:48px var(--gut) 0;align-items:center}
+.cover-copy{grid-column:1/7}
+.issue{font:italic 18px/1.4 var(--font-d);border-bottom:1px solid;padding-bottom:10px;margin-bottom:24px}
+.cover h1{font-size:clamp(3.4rem,8vw,7.4rem);letter-spacing:-.035em;line-height:.95}
+.cover mark{background:linear-gradient(transparent 58%,var(--yellow) 58%,var(--yellow) 92%,transparent 92%) no-repeat 0 0/100% 100%;color:inherit;font-style:italic;animation:highlight 1.1s .3s ease-out both}
+@keyframes highlight{from{background-size:0 100%}to{background-size:100% 100%}}
+.lead{font-size:clamp(1.05rem,1.6vw,1.25rem);max-width:44ch;margin:24px 0}
+.cover-actions{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}
+.cover-actions .phone{font-weight:600;border-bottom:2px solid var(--yellow)}
+.cover-art{grid-column:7/13;margin:0}
+.cover-art figcaption{font-size:12px;text-align:right;letter-spacing:.06em}
+.cover-lines{grid-column:1/-1;list-style:none;display:grid;grid-template-columns:repeat(4,1fr);border-top:4px double;margin-top:24px}
+.cover-lines a{display:flex;flex-direction:column;gap:2px;padding:14px 16px 18px 0;text-decoration:none;font:600 1.05rem/1.25 var(--font-d);min-height:44px}
+.cover-lines li+li a{padding-left:16px;border-left:1px solid}
+.cover-lines span{font:600 12px var(--font-b);color:var(--red);letter-spacing:.1em}
+.cover-lines a:hover{background:var(--soft)}
+
+.sommario{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:56px;padding:88px var(--gut);border-top:1px solid}
+.som-head h2{font-size:clamp(2.6rem,5vw,4.5rem);margin-bottom:20px}
+.som-head{align-self:start;position:sticky;top:16px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.tabs button{min-height:44px;padding:8px 14px;border:1.5px solid;background:transparent;border-radius:999px}
+.tabs button[aria-pressed=true]{background:var(--fg);color:var(--bg)}
+.filter-status{font-size:14px;margin-top:10px}
+.toc{list-style:none;border-top:2px solid}
+.toc li{display:grid;grid-template-columns:72px minmax(0,1fr) auto;gap:20px;align-items:start;padding:22px 0;border-bottom:1px dotted}
+.pg{font:italic 700 2.6rem/1 var(--font-d);color:var(--red)}
+.toc h3{font-size:1.6rem;margin-bottom:6px}
+.toc p{margin:0;max-width:52ch}
+.toc .ask{align-self:center}
+
+.racconto{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px;padding:88px var(--gut);background:var(--fg);color:var(--bg);--focus:var(--yellow)}
+.year{font:italic 700 clamp(6rem,17vw,15rem)/.8 var(--font-d);color:var(--yellow);letter-spacing:-.06em;margin:0;align-self:start}
+.racconto h2{font-size:clamp(2.4rem,4.5vw,4rem);margin-bottom:28px}
+.cols{columns:2 260px;column-gap:32px;column-rule:1px solid rgba(251,248,241,.35)}
+.dropcap::first-letter{float:left;font:700 4.4rem/.8 var(--font-d);color:var(--yellow);padding:6px 10px 0 0}
+.timeline{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px;border-top:1px solid}
+.timeline li{padding-top:14px}
+.timeline strong{display:block;font:italic 700 1.1rem var(--font-d);color:var(--yellow)}
+
+.letter{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;padding:88px var(--gut)}
+.letter h2{font-size:clamp(2.4rem,4.5vw,4rem);margin-bottom:20px}
+.letter .brief-sheet{background:repeating-linear-gradient(transparent 0 31px,rgba(19,50,74,.12) 31px 32px),#fffdf7;border:1px solid;padding:36px 32px 32px 56px;position:relative;box-shadow:10px 10px 0 var(--soft);transform:rotate(.4deg)}
+.letter .brief-sheet::before{content:"";position:absolute;left:36px;top:0;bottom:0;border-left:2px solid var(--red)}
+.letter input:not([type=checkbox]),.letter select,.letter textarea{border-width:0 0 2px;background:transparent}
+.letter .chips button{border-radius:999px;border-width:1.5px}
+.letter .privacy-note{border-color:var(--yellow)}
+
+.colophon{padding:72px var(--gut) 88px;border-top:4px double}
+.colophon h2{font-size:clamp(2.2rem,4vw,3.6rem);margin-bottom:32px}
+.colophon dl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin:0}
+.colophon dl>div{border-top:2px solid;padding-top:12px}
+.colophon dt{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;margin-bottom:8px}
+.colophon dd{margin:0}
+.colophon .phone{font:700 1.5rem var(--font-d)}
+
+@media (max-width:1000px){.cover-copy,.cover-art{grid-column:1/-1}.cover-lines{grid-template-columns:1fr 1fr}.cover-lines li:nth-child(3) a{padding-left:0;border-left:0}.cover-lines li:nth-child(n+3){border-top:1px solid}.sommario,.racconto,.letter{grid-template-columns:1fr;gap:32px}.som-head{position:static}.colophon dl{grid-template-columns:1fr 1fr}.timeline{grid-template-columns:1fr}}
+@media (max-width:560px){.cover{padding-top:28px}.toc li{grid-template-columns:48px minmax(0,1fr)}.toc .ask{grid-column:2;justify-self:start}.pg{font-size:2rem}.colophon dl{grid-template-columns:1fr}.letter .brief-sheet{padding:24px 16px 24px 34px;transform:none;box-shadow:6px 6px 0 var(--soft)}.letter .brief-sheet::before{left:20px}.sommario,.racconto,.letter{padding-block:60px}}

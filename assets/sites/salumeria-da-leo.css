@@ -1,0 +1,54 @@
+/* 11 Da Leo — market stall: red and cream awning, painted slab sign, slate chalkboard, kraft tags. */
+.s-salumeria-da-leo{--bg:#f7f3e8;--fg:#1f2a24;--red:#b72c25;--slate:#1f2a24;--chalk:#f2efe6;--mustard:#e8b84a;--wood:#8a5a32;--font-d:"Alfa Slab One",Rockwell,serif;--font-b:"Rubik",system-ui,sans-serif;--demo-bg:#1f2a24;--demo-fg:#f7f3e8;--field-bg:#fff;--field-fg:#1f2a24;--btn-bg:#b72c25;--btn-fg:#fff;--chip-on-bg:#1f2a24;--chip-on-fg:#f7f3e8;--foot-bg:#1f2a24;--foot-fg:#f7f3e8;--focus:#b72c25;--radius:6px}
+.stall-head{padding:12px var(--gut);background:var(--red);color:#fff;--focus:#fff}
+.sign-mini{font:400 1.7rem/1 var(--font-d)}
+.stall-sub{font-size:13px;max-width:12em;line-height:1.2}
+.stall-head .navlinks a{font-weight:600}
+.awning{height:64px;background:radial-gradient(circle at 30px 0,transparent 0 29px,var(--bg) 30px) 0 34px/60px 30px repeat-x,repeating-linear-gradient(90deg,var(--red) 0 30px,#fff 30px 60px);background-color:var(--bg)}
+@media (prefers-reduced-motion:no-preference){.awning{animation:sway 6s ease-in-out infinite alternate;transform-origin:top}}
+@keyframes sway{to{transform:scaleY(1.06)}}
+
+.stall{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:32px;padding:24px var(--gut) 72px;align-items:start}
+.board{background:linear-gradient(90deg,rgba(0,0,0,.05) 1px,transparent 1px) 0 0/9px 100%,#fbf6ea;border:6px solid var(--wood);padding:32px;box-shadow:0 14px 0 -6px var(--wood);text-align:center}
+.board h1{font-size:clamp(3rem,7vw,6.4rem);line-height:.95;color:var(--red);text-shadow:3px 3px 0 var(--fg)}
+.board h1 span{color:var(--fg);text-shadow:none}
+.motto{font:600 1.2rem var(--font-b);margin:12px 0 20px}
+.board figure{margin:0}
+.board figcaption{font-size:12px}
+.chalk{background:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px) 0 0/5px 5px,var(--slate);color:var(--chalk);border:12px solid var(--wood);padding:28px;transform:rotate(1.5deg);--focus:var(--mustard)}
+.chalk h2{font-size:1.8rem;color:var(--mustard);border-bottom:2px dashed rgba(242,239,230,.5);padding-bottom:12px;margin-bottom:14px}
+.chalk ul{list-style:none;display:grid;gap:14px}
+.chalk li span{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+.chalk li a{font:400 1.6rem var(--font-d);min-height:44px;display:inline-flex;align-items:center}
+.chalk .warn{border:2px solid var(--mustard);padding:10px 12px;color:#fff3c9}
+
+.route{padding:72px var(--gut);background:var(--mustard)}
+.route h2{font-size:clamp(2.4rem,5vw,4.2rem);margin-bottom:32px}
+.route ol{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;counter-reset:x}
+.route li{background:var(--bg);padding:28px 24px;border-radius:6px 6px 6px 40px;position:relative;clip-path:polygon(0 0,calc(100% - 26px) 0,100% 26px,100% 100%,0 100%)}
+.route b{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--red);color:#fff;font:400 1.5rem var(--font-d);margin-bottom:14px}
+.route h3{font:400 1.5rem var(--font-d);margin-bottom:8px}
+
+.offer{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:48px;padding:80px var(--gut)}
+.offer h2{font-size:clamp(2.4rem,5vw,4.2rem)}
+.offer ul{list-style:none;border-top:4px solid}
+.offer li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 24px;padding:20px 0;border-bottom:2px dashed}
+.offer h3{font:400 1.5rem var(--font-d);color:var(--red)}
+.offer p{grid-column:1;margin:0}
+.offer .ask{grid-column:2;grid-row:1/3;align-self:center}
+
+.shopping{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:48px;padding:80px var(--gut);background:var(--slate);color:var(--chalk);--focus:var(--mustard);--btn-bg:var(--mustard);--btn-fg:var(--slate);--chip-on-bg:var(--mustard);--chip-on-fg:var(--slate)}
+.shopping h2{font-size:clamp(2.4rem,5vw,4.2rem);color:var(--mustard)}
+.shopping .brief-sheet{background:#fff;color:var(--fg);padding:32px;border-radius:4px;background-image:linear-gradient(90deg,transparent 30px,#e7b0a8 30px,#e7b0a8 32px,transparent 32px);--focus:var(--red);--chip-on-bg:var(--fg);--chip-on-fg:#fff;--btn-bg:var(--red);--btn-fg:#fff}
+.shopping .chips>div{flex-direction:column}
+.shopping .chips button{text-align:left;border-radius:0;border-width:0 0 2px;padding-left:4px}
+.shopping .chips button::before{content:"☐ "}
+.shopping .chips button[aria-pressed=true]{background:transparent;color:var(--red)}
+.shopping .chips button[aria-pressed=true]::before{content:"☑ "}
+
+.neighbourhood{padding:72px var(--gut);text-align:center;background:repeating-linear-gradient(90deg,rgba(183,44,37,.08) 0 30px,transparent 30px 60px)}
+.neighbourhood h2{font-size:clamp(2.2rem,4.6vw,3.8rem);margin-bottom:16px}
+.neighbourhood p{max-width:60ch;margin:0 auto}
+
+@media (max-width:900px){.stall,.offer,.shopping{grid-template-columns:1fr;gap:28px}.route ol{grid-template-columns:1fr}.chalk{transform:none}}
+@media (max-width:520px){.board{padding:20px 14px}.offer li{grid-template-columns:1fr}.offer .ask{grid-column:1;grid-row:auto;justify-self:start}.shopping .brief-sheet{padding:22px 14px 22px 40px}.route,.offer,.shopping,.neighbourhood{padding-block:56px}}

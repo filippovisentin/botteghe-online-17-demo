@@ -1,0 +1,52 @@
+/* 07 Ambrosiano — typographic poster on kraft paper: condensed black capitals, signal red, breadsticks as letters. */
+.s-grissinificio-ambrosiano{--bg:#e9d3a7;--fg:#1d1a17;--red:#b3261e;--kraft:#dcc08a;--font-d:"Anton","Impact",sans-serif;--font-b:"Work Sans",system-ui,sans-serif;--demo-bg:#1d1a17;--demo-fg:#e9d3a7;--field-bg:#f7ecd6;--field-fg:#1d1a17;--btn-bg:#b3261e;--btn-fg:#fff;--chip-on-bg:#1d1a17;--chip-on-fg:#e9d3a7;--foot-bg:#1d1a17;--foot-fg:#e9d3a7;--focus:#b3261e}
+.s-grissinificio-ambrosiano h1,.s-grissinificio-ambrosiano h2{text-transform:uppercase;letter-spacing:.01em}
+body.s-grissinificio-ambrosiano{background:radial-gradient(rgba(29,26,23,.06) 1px,transparent 1.5px) 0 0/6px 6px,var(--bg)}
+.kraft{padding:16px var(--gut);border-bottom:6px solid var(--fg)}
+.kraft .brand{font:400 1.2rem/1 var(--font-d);text-transform:uppercase;letter-spacing:.04em}
+.stamp{display:grid;place-items:center;width:54px;height:54px;background:var(--red);color:#fff;font:400 1.6rem var(--font-d);transform:rotate(-6deg)}
+.kraft .navlinks a{font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:14px}
+
+.manifesto{padding:24px var(--gut) 56px}
+.word{display:flex;align-items:stretch;justify-content:space-between;font:400 clamp(5rem,19vw,19rem)/.82 var(--font-d);margin:0;height:.82em;gap:.02em}
+.word span{display:block}
+.stick{height:100%;width:.2em;flex:none}
+@media (prefers-reduced-motion:no-preference){.stick{transform-origin:50% 100%;animation:tilt 3.5s ease-in-out infinite alternate}.st5{animation-delay:.5s}.st7{animation-delay:1s}}
+@keyframes tilt{from{transform:rotate(-3deg)}to{transform:rotate(3deg)}}
+.mani-row{display:grid;grid-template-columns:auto 1fr auto;gap:32px;align-items:end;border-top:6px solid;border-bottom:2px solid;padding:18px 0;margin-top:16px}
+.mani-row h1{font-size:clamp(2rem,4vw,3.4rem);line-height:.95}
+.motto{font:600 clamp(1.1rem,2vw,1.5rem)/1.25 var(--font-b);margin:0;color:var(--red)}
+.mani-contact{text-align:right}
+.mani-contact p{margin:0}
+.mani-contact .phone{font:400 2rem var(--font-d)}
+.manifesto .fine{margin-top:10px}
+
+.sheet-product{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:56px;padding:80px var(--gut);background:var(--fg);color:var(--bg);--focus:#f0c27a}
+.sheet-product h2{font-size:clamp(2.6rem,5vw,4.6rem);line-height:.95;margin-bottom:20px}
+.sheet-product dl{margin:0;border:2px solid var(--bg)}
+.sheet-product dl>div{display:grid;grid-template-columns:150px 1fr;border-bottom:1px solid rgba(233,211,167,.4)}
+.sheet-product dl>div:last-child{border-bottom:0}
+.sheet-product dt{font:400 1.1rem var(--font-d);text-transform:uppercase;letter-spacing:.06em;padding:14px 16px;border-right:1px solid rgba(233,211,167,.4)}
+.sheet-product dd{margin:0;padding:14px 16px}
+.tbc{font-style:italic;color:#f0c27a}
+
+.qty{padding:80px var(--gut);text-align:center}
+.qty h2{font-size:clamp(3rem,8vw,7rem);line-height:.9;margin-bottom:32px}
+.qty-pick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;max-width:900px;margin:0 auto}
+.qty-pick [data-choice]{display:flex;flex-direction:column;align-items:center;gap:12px;padding:20px 12px;border:3px solid var(--fg);background:var(--kraft);font:400 1.3rem var(--font-d);text-transform:uppercase}
+.qty-pick [aria-pressed=true]{background:var(--red);color:#fff;border-color:var(--red)}
+.bundle{display:block;height:90px;background:repeating-linear-gradient(90deg,#e3b26a 0 10px,transparent 10px 16px);border-bottom:4px solid currentColor}
+.b-casa{width:42px}.b-tavolata{width:90px}.b-particolare{width:150px}
+.qty-note{max-width:60ch;margin:24px auto 0;font-weight:600;min-height:3em}
+
+.order-slip{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:56px;padding:80px var(--gut);border-top:6px solid}
+.order-slip h2{font-size:clamp(2.6rem,5vw,4.4rem);line-height:.95}
+.order-slip .brief-sheet{background:var(--field-bg);border:3px solid var(--fg);padding:32px;box-shadow:10px 10px 0 var(--red)}
+.order-slip label,.order-slip legend{text-transform:uppercase;letter-spacing:.06em;font-size:13px}
+
+.shop{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:end;padding:80px var(--gut);background:var(--red);color:#fff;--focus:#fff}
+.shop h2{font-size:clamp(3rem,8vw,7rem);line-height:.88}
+.shop .phone{font:400 2.4rem var(--font-d)}
+
+@media (max-width:900px){.mani-row{grid-template-columns:1fr;gap:12px}.mani-contact{text-align:left}.sheet-product,.order-slip,.shop{grid-template-columns:1fr;gap:28px}.qty-pick{grid-template-columns:1fr}}
+@media (max-width:520px){.sheet-product dl>div{grid-template-columns:1fr}.sheet-product dt{border-right:0;padding-bottom:0}.order-slip .brief-sheet{padding:22px 16px;box-shadow:6px 6px 0 var(--red)}.sheet-product,.qty,.order-slip,.shop{padding-block:56px}}

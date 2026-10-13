@@ -1,0 +1,53 @@
+@font-face{font-family:"Caveat";src:url("../fonts/caveat-latin-500-normal.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Caveat";src:url("../fonts/caveat-latin-700-normal.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Courier Prime";src:url("../fonts/courier-prime-latin-400-normal.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Courier Prime";src:url("../fonts/courier-prime-latin-700-normal.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+/* 10 Bottega delle Carni — a kitchen notebook: ruled paper, red margin, blue ballpoint handwriting, typewriter body, post-it and taped cards. */
+.s-bottega-delle-carni{--bg:#fdfcf8;--fg:#23324a;--red:#9e1b24;--rule:#c9d8e8;--margin:#d14b4b;--postit:#ffe873;--font-d:"Caveat","Segoe Print",cursive;--font-b:"Courier Prime","Courier New",monospace;--demo-bg:#23324a;--demo-fg:#fdfcf8;--field-bg:#fff;--field-fg:#23324a;--btn-bg:#9e1b24;--btn-fg:#fff;--chip-on-bg:#23324a;--chip-on-fg:#fff;--foot-bg:#23324a;--foot-fg:#fdfcf8;--focus:#9e1b24}
+body.s-bottega-delle-carni{background:linear-gradient(90deg,transparent calc(var(--gut) + 40px),var(--margin) calc(var(--gut) + 40px),var(--margin) calc(var(--gut) + 42px),transparent calc(var(--gut) + 42px)),repeating-linear-gradient(transparent 0 33px,var(--rule) 33px 34px),var(--bg)}
+.s-bottega-delle-carni h1,.s-bottega-delle-carni h2,.s-bottega-delle-carni h3{font-weight:700;line-height:1}
+.spiral{height:26px;background:radial-gradient(circle at 50% 100%,#23324a 0 7px,transparent 8px) 0 0/34px 26px repeat-x,#e8e3d8;border-bottom:2px solid #23324a}
+.note-head{padding:10px var(--gut);background:var(--bg)}
+.note-head .brand{flex-direction:column;align-items:flex-start;gap:0}
+.hand{font:700 2.1rem/1 var(--font-d);color:var(--red)}
+.where{font-size:13px}
+
+.page-one{display:grid;grid-template-columns:44px minmax(0,1.3fr) minmax(0,1fr);gap:24px 48px;padding:34px var(--gut) 68px;position:relative}
+.margin{display:flex;flex-direction:column;gap:34px;font:700 1.2rem var(--font-d);color:var(--margin);padding-top:12px}
+.date{font:700 1.5rem var(--font-d);margin:0}
+.page-one h1{font-size:clamp(3.8rem,8.4vw,7.6rem);line-height:.9;color:var(--fg)}
+.scribble{color:var(--red);background:linear-gradient(transparent 82%,rgba(158,27,36,.25) 82%)}
+.page-one .lead{font-size:1.05rem;max-width:52ch;margin-top:22px;background:var(--bg)}
+.todo{list-style:none;display:grid;gap:2px;font:700 1.6rem var(--font-d)}
+.todo li::before{content:"☐  ";color:var(--red)}
+.sketch{margin:0;align-self:center;transform:rotate(-3deg)}
+.sketch figcaption{font:700 1.1rem var(--font-d);text-align:center}
+.postit{position:absolute;right:var(--gut);bottom:24px;width:260px;background:var(--postit);padding:18px 18px 22px;transform:rotate(3deg);box-shadow:0 10px 18px rgba(0,0,0,.12);font-size:15px;margin:0}
+.postit strong{font:700 1.4rem var(--font-d)}
+
+.notebook{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:48px;padding:68px var(--gut)}
+.notebook h2{font-size:clamp(3rem,6vw,5rem);color:var(--red)}
+.notebook .kicker{font:700 1.4rem var(--font-d);text-transform:none;letter-spacing:0}
+.notebook .brief-head p{background:var(--bg)}
+.notebook .brief-sheet{background:#fff;border:2px solid var(--fg);padding:32px;transform:rotate(.6deg);box-shadow:-8px 8px 0 var(--rule)}
+.notebook label,.notebook legend{font:700 1.5rem var(--font-d)}
+.notebook input:not([type=checkbox]),.notebook select,.notebook textarea{border-width:0 0 2px;font-family:var(--font-b)}
+
+.cards{padding:68px var(--gut)}
+.cards h2{font-size:clamp(3rem,6vw,5rem);margin-bottom:28px}
+.cards ul{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.card{position:relative;background:#fff;border:1px solid #c9c2b2;padding:30px 22px 22px;background-image:linear-gradient(transparent 52px,var(--margin) 52px,var(--margin) 54px,transparent 54px);box-shadow:0 6px 0 #e8e3d8}
+.card.c0{transform:rotate(-1.5deg)}.card.c1{transform:rotate(1deg) translateY(18px)}.card.c2{transform:rotate(-.5deg)}
+.tape{position:absolute;top:-12px;left:50%;width:90px;height:24px;background:rgba(255,232,115,.8);transform:translateX(-50%) rotate(-4deg)}
+.cat{font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
+.card h3{font-size:2rem;color:var(--red);margin-bottom:8px}
+.story{margin-top:44px;max-width:60ch;background:var(--bg)}
+
+.shop{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;padding:68px var(--gut) 88px;align-items:end}
+.shop h2{font-size:clamp(3rem,6.6vw,5.6rem);color:var(--red)}
+.addr{font:700 1.9rem var(--font-d);margin:0}
+.phone-missing{background:var(--postit);padding:10px 14px;display:inline-block;transform:rotate(-1deg)}
+.small{font-size:.95rem}
+
+@media (max-width:980px){.page-one{grid-template-columns:44px minmax(0,1fr)}.sketch{grid-column:2;max-width:420px}.postit{position:static;grid-column:2;width:auto;max-width:340px}.notebook,.shop{grid-template-columns:1fr;gap:24px}.cards ul{grid-template-columns:1fr}.card.c1{transform:rotate(1deg)}}
+@media (max-width:560px){.page-one{grid-template-columns:1fr;padding-left:calc(var(--gut) + 50px)}.margin{display:none}.sketch,.postit{grid-column:1}.notebook,.cards,.shop{padding-left:calc(var(--gut) + 50px)}.notebook .brief-sheet{padding:22px 14px;transform:none}body.s-bottega-delle-carni{background:linear-gradient(90deg,transparent 40px,var(--margin) 40px,var(--margin) 42px,transparent 42px),repeating-linear-gradient(transparent 0 33px,var(--rule) 33px 34px),var(--bg)}.page-one,.notebook,.cards,.shop{padding-block:48px}}

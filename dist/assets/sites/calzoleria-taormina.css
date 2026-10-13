@@ -1,0 +1,54 @@
+@font-face{font-family:"Big Shoulders Display";src:url("../fonts/big-shoulders-display-latin-600-normal.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Big Shoulders Display";src:url("../fonts/big-shoulders-display-latin-800-normal.woff2") format("woff2");font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:"Archivo";src:url("../fonts/archivo-latin-400-normal.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Archivo";src:url("../fonts/archivo-latin-700-normal.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+/* 16 Taormina — an itinerary: cream road map, deep blue ink, milestone yellow, tall condensed numerals, majolica edge. */
+.s-calzoleria-taormina{--bg:#fdf6e3;--fg:#1b2a4a;--yellow:#f2b705;--tile:#2a5caa;--font-d:"Big Shoulders Display","Arial Narrow",sans-serif;--font-b:"Archivo",system-ui,sans-serif;--demo-bg:#1b2a4a;--demo-fg:#f2b705;--field-bg:#fff;--field-fg:#1b2a4a;--btn-bg:#1b2a4a;--btn-fg:#f2b705;--chip-on-bg:#1b2a4a;--chip-on-fg:#f2b705;--foot-bg:#1b2a4a;--foot-fg:#fdf6e3;--focus:#2a5caa;--radius:4px}
+.s-calzoleria-taormina h1,.s-calzoleria-taormina h2,.s-calzoleria-taormina h3{font-weight:800;text-transform:uppercase;letter-spacing:.01em}
+.cond{margin:0;padding:10px var(--gut);background:var(--yellow);font-size:15px}
+.route-head{padding:14px var(--gut);border-bottom:10px solid transparent;border-image:repeating-linear-gradient(90deg,var(--tile) 0 10px,var(--bg) 10px 20px,var(--yellow) 20px 30px,var(--bg) 30px 40px) 10}
+.route-head .brand{font:800 1.5rem var(--font-d);text-transform:uppercase}
+.km{background:var(--fg);color:var(--yellow);padding:6px 10px;border-radius:4px;font-size:1rem}
+.route-head .navlinks a{font-weight:700}
+
+.trip{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:40px;align-items:center;padding:48px var(--gut) 72px;background:repeating-linear-gradient(45deg,transparent 0 40px,rgba(42,92,170,.04) 40px 41px),var(--bg)}
+.trip h1{font-size:clamp(3.6rem,7.4vw,7.4rem);line-height:.86}
+.trip h1 span{color:var(--tile)}
+.trip .lead{font-size:1.15rem;max-width:42ch;margin:20px 0}
+.trip-actions{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center}
+.trip-art{margin:0}
+.trip-art figcaption{font-size:12px;text-align:right}
+@media (prefers-reduced-motion:no-preference){.trip-art g[transform]{animation:steps 3.5s ease-in-out infinite}.trip-art g[transform]:nth-of-type(2n){animation-delay:.4s}}
+@keyframes steps{50%{opacity:.35}}
+
+.itinerary{padding:72px var(--gut);background:var(--fg);color:var(--bg);--focus:var(--yellow)}
+.itinerary h2{font-size:clamp(2.4rem,5vw,4.4rem);margin-bottom:44px;color:var(--yellow)}
+.itinerary ol{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;position:relative}
+.itinerary ol::before{content:"";position:absolute;left:0;right:0;top:22px;border-top:4px dashed var(--yellow)}
+.itinerary li{position:relative;padding-top:56px}
+.itinerary li::before{content:"";position:absolute;top:8px;left:0;width:32px;height:32px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 6px var(--fg)}
+.km-mark{font:800 1.1rem var(--font-d);color:var(--yellow);text-transform:uppercase}
+.itinerary h3{font-size:2rem;margin:4px 0 8px}
+
+.stages{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:48px;padding:80px var(--gut)}
+.stages h2{font-size:clamp(2.4rem,5vw,4.2rem);line-height:.95}
+.stages ul{list-style:none}
+.stages li{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:20px;align-items:center;padding:22px 0;border-bottom:2px solid}
+.stages li:first-child{border-top:2px solid}
+.n{display:grid;place-items:center;width:56px;height:56px;background:var(--yellow);font:800 1.8rem var(--font-d);border-radius:28px 28px 4px 4px}
+.stages h3{font-size:1.8rem}
+.stages p{margin:4px 0 0}
+
+.object-sheet{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:48px;padding:80px var(--gut);background:#f7ecd0}
+.object-sheet h2{font-size:clamp(2.4rem,5vw,4.2rem);line-height:.95}
+.object-sheet .brief-sheet{background:#fff;border:3px solid var(--fg);padding:32px;border-radius:4px;position:relative}
+.object-sheet .brief-sheet::before{content:"";position:absolute;inset:-12px;border:2px dashed var(--tile);border-radius:8px;pointer-events:none}
+
+.sede{display:grid;grid-template-columns:auto minmax(0,1fr);gap:56px;align-items:center;padding:80px var(--gut) 96px}
+.milestone{margin:0;width:220px;padding:56px 0 30px;text-align:center;background:var(--yellow);border:5px solid var(--fg);border-radius:110px 110px 6px 6px;font:800 5.4rem/1 var(--font-d);box-shadow:0 18px 0 -6px var(--fg)}
+.sede h2{font-size:clamp(2.4rem,5vw,4.2rem);line-height:.95;margin-bottom:12px}
+.sede .phone{font:800 2.4rem var(--font-d)}
+.small{font-size:.95rem}
+
+@media (max-width:900px){.trip,.stages,.object-sheet{grid-template-columns:1fr;gap:28px}.itinerary ol{grid-template-columns:1fr 1fr}.itinerary ol::before{display:none}}
+@media (max-width:560px){.itinerary ol{grid-template-columns:1fr}.stages li{grid-template-columns:56px minmax(0,1fr)}.stages .ask{grid-column:2;justify-self:start}.sede{grid-template-columns:1fr;gap:20px}.milestone{width:160px;font-size:4rem;padding-top:40px}.object-sheet .brief-sheet{padding:22px 14px}.itinerary,.stages,.object-sheet,.sede{padding-block:56px}}

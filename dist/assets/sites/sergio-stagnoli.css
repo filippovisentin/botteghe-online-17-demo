@@ -1,0 +1,61 @@
+@font-face{font-family:"Cormorant Garamond";src:url("../fonts/cormorant-garamond-latin-500-normal.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Cormorant Garamond";src:url("../fonts/cormorant-garamond-latin-500-italic.woff2") format("woff2");font-weight:500;font-style:italic;font-display:swap}
+@font-face{font-family:"Jost";src:url("../fonts/jost-latin-400-normal.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Jost";src:url("../fonts/jost-latin-500-normal.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
+/* 05 Stagnoli — interiors studio: linen, olive, terracotta, light serif, generous whitespace and material tiles. */
+.s-sergio-stagnoli{--bg:#ebe4d6;--fg:#2d3226;--olive:#5d6b3f;--terra:#9c4a28;--linen:#f6f2e9;--font-d:"Cormorant Garamond",Georgia,serif;--font-b:"Jost",system-ui,sans-serif;--demo-bg:#2d3226;--demo-fg:#ebe4d6;--field-bg:#f6f2e9;--field-fg:#2d3226;--field-line:#7a7e70;--btn-bg:#2d3226;--btn-fg:#f6f2e9;--chip-on-bg:#5d6b3f;--chip-on-fg:#fff;--foot-bg:#2d3226;--foot-fg:#ebe4d6;--focus:#9c4a28}
+.s-sergio-stagnoli h1,.s-sergio-stagnoli h2{font-weight:500}
+.s-sergio-stagnoli em{font-style:italic;color:var(--terra)}
+.verify-strip{margin:0;padding:10px var(--gut);background:var(--terra);color:#fff;font-size:15px}
+.studio{padding:20px var(--gut)}
+.studio .brand{flex-direction:column;align-items:flex-start;gap:0;font:500 1.7rem/1 var(--font-d)}
+.studio .brand small{font:400 12px var(--font-b);letter-spacing:.2em;text-transform:uppercase}
+.studio .navlinks a{font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+
+.uph{fill:url(#stoffa);transition:fill .3s}
+body[data-material=pelle] .uph{fill:url(#pelle)}
+body[data-material=neutro] .uph{fill:url(#neutro)}
+.room{display:grid;grid-template-columns:48px minmax(0,1.2fr) minmax(0,1fr);gap:32px;align-items:center;padding:24px var(--gut) 64px}
+.vertical{writing-mode:vertical-rl;transform:rotate(180deg);font-size:12px;letter-spacing:.3em;text-transform:uppercase;margin:0;align-self:stretch;text-align:center;border-left:1px solid}
+.chair{margin:0;background:var(--linen);padding:32px;border-radius:300px 300px 0 0}
+.chair figcaption{font-size:12px;text-align:center;letter-spacing:.08em}
+.room h1{font-size:clamp(3.6rem,8vw,7.4rem);line-height:.88}
+.room .lead{font-size:1.1rem;max-width:40ch;margin-top:24px}
+
+.samples{padding:72px var(--gut);background:var(--fg);color:var(--bg);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:24px 56px;--focus:#e4b48f}
+.samples em{color:#e4b48f}
+.samples .material-note{grid-column:2}
+.samples h2{font-size:clamp(2.4rem,4.4vw,3.8rem);margin-bottom:16px}
+.swatches{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-self:end}
+.swatches [data-choice]{display:flex;flex-direction:column;gap:10px;padding:10px 10px 14px;border:1px solid rgba(235,228,214,.5);background:transparent;color:inherit;border-radius:0;text-align:left;font-size:15px;letter-spacing:.06em;text-transform:uppercase}
+.swatches [aria-pressed=true]{background:var(--bg);color:var(--fg)}
+.sw{display:block;aspect-ratio:1/1.1;width:100%;clip-path:polygon(0 0,100% 0,100% 88%,92% 100%,0 100%)}
+.sw-stoffa{background:repeating-linear-gradient(0deg,#a48c62 0 3px,#b9a27a 3px 9px),#b9a27a;background-blend-mode:multiply}
+.sw-pelle{background:radial-gradient(circle at 50% 50%,#3d1f12 3px,transparent 4px) 0 0/40px 40px,linear-gradient(135deg,#7a4428,#5a2f1b)}
+.sw-neutro{background:repeating-linear-gradient(45deg,#e2dccd 0 6px,#c9c0ab 6px 8px)}
+.material-note{border-left:2px solid #e4b48f;padding-left:14px;min-height:3.2em}
+
+.mood{padding:88px var(--gut)}
+.mood h2{font-size:clamp(2.6rem,5vw,4.4rem);margin-bottom:36px}
+.mood ol{list-style:none;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:minmax(150px,auto);gap:16px}
+.mood li{padding:28px;background:var(--linen)}
+.mood li span{font:500 2.6rem var(--font-d);color:var(--terra)}
+.mood h3{font:500 1.8rem var(--font-d);margin:6px 0 10px}
+.mood .t1{grid-column:1/4;grid-row:span 2;background:repeating-linear-gradient(0deg,rgba(164,140,98,.18) 0 3px,transparent 3px 9px),var(--linen)}
+.mood .t2{grid-column:4/7;background:var(--olive);color:#fff}
+.mood .t2 span{color:#e9d7a8}
+.mood .t3{grid-column:4/6}
+.mood .t4{grid-column:6/7;background:var(--terra);color:#fff;font-size:15px}
+
+.atelier{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:56px;padding:88px var(--gut);border-top:1px solid}
+.atelier h2{font-size:clamp(2.6rem,5vw,4.4rem)}
+.atelier .brief-sheet{background:var(--linen);padding:36px;border-top:10px solid var(--olive)}
+.atelier input:not([type=checkbox]),.atelier select,.atelier textarea{border-width:0 0 1.5px}
+.studio-info{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:56px;padding:72px var(--gut) 88px;background:var(--linen)}
+.studio-info h2{font-size:clamp(2.4rem,4.4vw,3.8rem)}
+.addr{font:500 1.9rem var(--font-d);margin:0}
+.studio-info .phone{font:500 1.6rem var(--font-b)}
+.small{font-size:.95rem}
+
+@media (max-width:980px){.room{grid-template-columns:1fr}.vertical{display:none}.room-copy{order:-1}.samples,.atelier,.studio-info{grid-template-columns:1fr;gap:24px}.samples .material-note{grid-column:1}.mood ol{grid-template-columns:1fr 1fr}.mood .t1,.mood .t2,.mood .t3,.mood .t4{grid-column:auto;grid-row:auto}}
+@media (max-width:560px){.mood ol{grid-template-columns:1fr}.swatches{gap:8px}.swatches [data-choice]{font-size:12px;padding:6px 6px 10px}.chair{padding:20px;border-radius:200px 200px 0 0}.samples,.mood,.atelier,.studio-info{padding-block:56px}.atelier .brief-sheet{padding:24px 18px}}

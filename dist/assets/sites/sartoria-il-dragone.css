@@ -1,0 +1,49 @@
+@font-face{font-family:"Space Mono";src:url("../fonts/space-mono-latin-400-normal.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Space Mono";src:url("../fonts/space-mono-latin-700-normal.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Space Grotesk";src:url("../fonts/space-grotesk-latin-400-normal.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Space Grotesk";src:url("../fonts/space-grotesk-latin-600-normal.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap}
+/* 14 Il Dragone — pattern paper: dotted grid, rulers, red cutting lines, blue chalk, monospaced coordinates. */
+.s-sartoria-il-dragone{--bg:#efe6cf;--fg:#1e2a44;--red:#b03226;--blue:#2f5fa7;--paper:#f7f0dc;--font-d:"Space Grotesk",system-ui,sans-serif;--font-b:"Space Grotesk",system-ui,sans-serif;--mono:"Space Mono",ui-monospace,monospace;--demo-bg:#1e2a44;--demo-fg:#efe6cf;--field-bg:#fbf7ea;--field-fg:#1e2a44;--btn-bg:#1e2a44;--btn-fg:#efe6cf;--chip-on-bg:#b03226;--chip-on-fg:#fff;--foot-bg:#1e2a44;--foot-fg:#efe6cf;--focus:#b03226}
+body.s-sartoria-il-dragone{background:radial-gradient(rgba(30,42,68,.22) 1px,transparent 1.4px) 0 0/24px 24px,var(--bg)}
+.s-sartoria-il-dragone h1,.s-sartoria-il-dragone h2{font-weight:600;letter-spacing:-.03em}
+.s-sartoria-il-dragone em{color:var(--red);font-style:normal}
+.coords,.code{font:700 13px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--red)}
+.pattern-head{padding:14px var(--gut);border-bottom:2px dashed var(--red)}
+.pattern-head .brand{flex-direction:column;align-items:flex-start;gap:0;font:600 1.4rem var(--font-d)}
+.pattern-head .navlinks a{font:400 13px var(--mono)}
+
+.cut{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;padding:56px var(--gut) 72px calc(var(--gut) + 24px);align-items:center}
+.ruler-x{position:absolute;top:0;left:0;right:0;height:22px;background:repeating-linear-gradient(90deg,var(--fg) 0 1px,transparent 1px 10px),repeating-linear-gradient(90deg,var(--fg) 0 2px,transparent 2px 50px);background-size:100% 8px,100% 16px;background-repeat:no-repeat;background-color:var(--paper);border-bottom:1px solid}
+.ruler-y{position:absolute;top:0;bottom:0;left:0;width:22px;background:repeating-linear-gradient(0deg,var(--fg) 0 1px,transparent 1px 10px),repeating-linear-gradient(0deg,var(--fg) 0 2px,transparent 2px 50px);background-size:8px 100%,16px 100%;background-repeat:no-repeat;background-color:var(--paper);border-right:1px solid}
+.cut h1{font-size:clamp(3.4rem,7vw,6.6rem);line-height:.92;margin:12px 0 20px}
+.cut .lead{max-width:44ch;font-size:1.1rem}
+.note{font:400 14px var(--mono);border:2px dashed var(--red);padding:12px 14px;max-width:46ch;background:var(--paper)}
+.piece{margin:0;transform:rotate(3deg)}
+.piece figcaption{font:400 12px var(--mono);text-align:center}
+@media (prefers-reduced-motion:no-preference){.piece svg path[stroke-dasharray]{animation:sew 10s linear infinite}}
+@keyframes sew{to{stroke-dashoffset:-170}}
+
+.garment{padding:72px var(--gut);background:var(--fg);color:var(--bg);position:relative;--focus:#f1b6a9}
+.garment .coords{color:#f1b6a9}
+.tape{position:absolute;top:0;left:0;right:0;height:26px;background:repeating-linear-gradient(90deg,#1e2a44 0 1px,transparent 1px 10px) 0 0/100% 10px no-repeat,#e8c547;border-bottom:2px solid #1e2a44}
+.garment h2{font-size:clamp(2.4rem,5vw,4.2rem);margin:8px 0 12px}
+.starts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:24px 0 16px}
+.starts [data-choice]{display:flex;align-items:center;gap:14px;text-align:left;padding:16px;border:2px dashed var(--bg);color:var(--bg);background:transparent;font:600 1.05rem var(--font-b);border-radius:0}
+.starts [aria-pressed=true]{background:var(--bg);color:var(--fg);border-style:solid}
+.pin{display:grid;place-items:center;width:36px;height:36px;flex:none;border-radius:50%;background:var(--red);color:#fff;font:700 15px var(--mono)}
+.garment-note{font:400 15px var(--mono);border-left:3px solid #f1b6a9;padding-left:14px;max-width:70ch;min-height:3.2em}
+
+.project{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:48px;padding:80px var(--gut)}
+.project h2{font-size:clamp(2.4rem,5vw,4.2rem)}
+.project .kicker{font-family:var(--mono);color:var(--red)}
+.project .brief-sheet{background:var(--paper);border:2px dashed var(--fg);padding:32px;clip-path:polygon(0 0,calc(100% - 40px) 0,100% 40px,100% 100%,0 100%)}
+.project label,.project legend{font:700 13px var(--mono);text-transform:uppercase;letter-spacing:.04em}
+
+.visit{padding:72px var(--gut) 88px;border-top:2px dashed var(--red)}
+.visit h2{font-size:clamp(2.4rem,5vw,4.2rem);margin:8px 0 28px}
+.visit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.addr{font:600 1.6rem var(--font-d);margin:0}
+.phone-missing{font:400 15px var(--mono);border:2px dashed var(--red);padding:10px 12px}
+
+@media (max-width:900px){.cut,.project{grid-template-columns:1fr;gap:28px}.starts,.visit-grid{grid-template-columns:1fr}.piece{max-width:440px}}
+@media (max-width:480px){.project .brief-sheet{padding:22px 14px}.garment,.project,.visit{padding-block:56px}.cut{padding-top:44px}}

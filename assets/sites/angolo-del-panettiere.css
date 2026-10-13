@@ -1,0 +1,40 @@
+/* 17 L’Angolo del Panettiere — corner geometry: a 45° split, mustard and terracotta, a chunky tilted sign, triangles everywhere. */
+.s-angolo-del-panettiere{--bg:#fff7e6;--fg:#2d1b10;--mustard:#f6c945;--terra:#c2461d;--font-d:"Bagel Fat One",Impact,sans-serif;--font-b:"Figtree",system-ui,sans-serif;--demo-bg:#2d1b10;--demo-fg:#f6c945;--field-bg:#fff;--field-fg:#2d1b10;--btn-bg:#c2461d;--btn-fg:#fff;--chip-on-bg:#2d1b10;--chip-on-fg:#f6c945;--foot-bg:#2d1b10;--foot-fg:#fff7e6;--focus:#c2461d;--radius:14px}
+.corner-head{padding:14px var(--gut);background:var(--mustard)}
+.corner-head .brand{font:400 1.3rem/1 var(--font-d);gap:8px}
+.tilt{display:inline-block;background:var(--terra);color:#fff;padding:6px 10px;border-radius:8px;transform:rotate(-6deg)}
+.corner-head .navlinks a{font-weight:700}
+
+.corner{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:32px;align-items:center;padding:56px var(--gut) 96px;background:linear-gradient(135deg,var(--mustard) 0 55%,var(--bg) 55%);overflow:hidden}
+.sign-wrap{position:relative;z-index:1}
+.sign{display:inline-block;font-size:clamp(3.2rem,7.4vw,6.8rem);line-height:.92;background:var(--terra);color:#fff7e6;padding:28px 34px 32px;border-radius:24px;transform:rotate(-7deg);box-shadow:10px 12px 0 var(--fg);margin:20px 0 40px}
+@media (prefers-reduced-motion:no-preference){.sign{transition:transform .3s}.sign:hover{transform:rotate(-3deg)}}
+.corner .lead{max-width:40ch;font-size:1.15rem;font-weight:700}
+.corner-art{margin:0;position:relative;z-index:1}
+.corner-art figcaption{font-size:12px;text-align:right}
+.big2{position:absolute;right:-2%;bottom:-18%;font:400 clamp(16rem,40vw,34rem)/1 var(--font-d);color:var(--mustard);opacity:.5;margin:0;z-index:0}
+
+.piazza{display:grid;grid-template-columns:120px minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:center;padding:80px var(--gut);background:var(--fg);color:var(--bg);--focus:var(--mustard)}
+.tri{width:120px;aspect-ratio:1;background:var(--mustard);clip-path:polygon(0 0,100% 0,0 100%)}
+.piazza .kicker{color:var(--mustard)}
+.piazza h2{font-size:clamp(2.4rem,5vw,4.2rem);line-height:.95;margin-bottom:16px}
+.addr{font:700 1.5rem var(--font-b);margin:0}
+.board{background:var(--mustard);color:var(--fg);padding:24px;border-radius:14px;transform:rotate(2deg)}
+.board-t{font:400 1.1rem var(--font-d);margin:0}
+.board p:not(.board-t){margin-bottom:12px}
+
+.questions{padding:80px var(--gut)}
+.questions h2{font-size:clamp(2.4rem,5vw,4.2rem);line-height:.95;margin-bottom:36px}
+.questions ul{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.questions li{position:relative;padding:32px 28px 28px;background:#fff;border:3px solid var(--fg);border-radius:14px;overflow:hidden}
+.questions li::after{content:"";position:absolute;top:0;right:0;width:70px;height:70px;background:var(--mustard);clip-path:polygon(0 0,100% 0,100% 100%)}
+.questions .q1{background:var(--mustard)}.questions .q1::after{background:var(--terra)}
+.questions h3{font-size:1.6rem;margin-bottom:10px;padding-right:50px}
+.story{margin-top:32px;max-width:60ch}
+
+.reminder{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:48px;padding:80px var(--gut);background:linear-gradient(-45deg,var(--mustard) 0 18%,var(--bg) 18%)}
+.reminder h2{font-size:clamp(2.4rem,5vw,4.2rem);line-height:.95}
+.reminder .brief-sheet{background:#fff;border:3px solid var(--fg);border-radius:20px 20px 20px 0;padding:32px;box-shadow:10px 10px 0 var(--terra)}
+
+@media (max-width:900px){.corner{grid-template-columns:1fr;background:linear-gradient(160deg,var(--mustard) 0 48%,var(--bg) 48%)}.piazza{grid-template-columns:1fr;gap:24px}.tri{width:70px}.questions ul,.reminder{grid-template-columns:1fr}.reminder{gap:28px}}
+@media (max-width:480px){.sign{padding:18px 22px 22px;margin:12px 0 28px;box-shadow:6px 8px 0 var(--fg)}.reminder .brief-sheet{padding:22px 14px;box-shadow:6px 6px 0 var(--terra)}.piazza,.questions,.reminder{padding-block:56px}.corner{padding-top:36px}}
